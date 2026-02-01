@@ -84,12 +84,10 @@ jobs:
         run: |
           gpatch ./Amethyst-iOS/Natives/MinecraftResourceDownloadTask.m MinecraftResourceDownloadTask.patch
 
-      - name: Fix missing headers in JavaLauncher.m
+      - name: Fix missing headers
         run: |
-          sed -i '' '1i\
-        #include <mach/mach.h>\
-        #include <mach/task.h>\
-        #include <mach/thread_act.h>' Natives/JavaLauncher.m
+          sed -i '' '1i\'$'\n''#include <mach/mach.h>\'$'\n''#include <mach/task.h>\'$'\n''#include <mach/thread_act.h>\'$'\n' Natives/JavaLauncher.m
+
       - name: Build for ${{ matrix.platform_name }}
         run: |
           cd Amethyst-iOS
