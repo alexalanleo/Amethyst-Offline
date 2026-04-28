@@ -1,3 +1,8 @@
+i got no clue what im doing, i made some changes to some things and it worked somehow so im uploading it here
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+
 # Amethyst-Offline
 An offline version of [Amethyst](https://wiki.angelauramc.dev/), a MC Launcher based on PojavLauncher.
 
